@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.LoginController">
+
+    <children>
+        <VBox alignment="CENTER" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <ImageView fitHeight="377.0" fitWidth="430.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Login.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ImageView>
+
+                <Label styleClass="title" text="Welcome Back!" />
+                <Text styleClass="subtitle" text="Sign in to continue to BloomWell" />
+
+                <VBox maxWidth="550.0" prefHeight="150.0">
+                    <children>
+                        <Label styleClass="subtext" text="Email Address" />
+                        <TextField fx:id="emailField" prefWidth="550.0" promptText="Enter your email address" styleClass="auth-field" />
+
+                        <Label styleClass="subtext" text="Password" />
+                        <PasswordField fx:id="passwordField" prefWidth="550.0" promptText="Enter your password" styleClass="auth-field" />
+
+                        <Label fx:id="messageLabel" styleClass="error-label" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                    </VBox.margin>
+                </VBox>
+
+                <!-- Spinner -->
+                <ProgressIndicator fx:id="spinner" prefHeight="40.0" prefWidth="40.0" visible="false">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </ProgressIndicator>
+
+                <!-- Login Button -->
+                <Button fx:id="loginButton" onAction="#handleLogin" styleClass="default-button" text="Login" />
+
+                <HBox alignment="CENTER">
+                    <Text styleClass="subtext" text="New here? " />
+                    <Hyperlink onAction="#handleSignUp" styleClass="link" text="Create an account" />
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

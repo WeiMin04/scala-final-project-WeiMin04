@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800" prefWidth="1200" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.SleepController">
+
+    <children>
+        <VBox alignment="CENTER_LEFT" spacing="12" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="20">
+
+            <Label styleClass="title" text="Sleep Tracker" />
+
+            <!-- Date -->
+            <Label styleClass="subtext" text="Sleep Date" />
+            <DatePicker fx:id="datePicker" />
+
+            <!-- Sleep time -->
+            <Label styleClass="subtext" text="Sleep Time (HH:mm)" />
+            <TextField fx:id="sleepTimeField" promptText="e.g. 23:30" styleClass="auth-field" />
+
+            <!-- Wake time -->
+            <Label styleClass="subtext" text="Wake-up Time (HH:mm)" />
+            <TextField fx:id="wakeTimeField" promptText="e.g. 07:00" styleClass="auth-field" />
+
+            <!-- Quality -->
+            <Label styleClass="subtext" text="Sleep Quality" />
+            <ChoiceBox fx:id="qualityChoice" styleClass="auth-field" />
+
+            <!-- Notes -->
+            <Label styleClass="subtext" text="Sleep Notes (optional)" />
+            <TextArea fx:id="symptomArea" prefRowCount="3" styleClass="auth-text-area" />
+
+            <HBox alignment="CENTER_LEFT" spacing="30">
+                <Button onAction="#saveSleep" styleClass="default-button" text="Save Sleep" />
+                <Hyperlink contentDisplay="CENTER" onAction="#goDashboard" styleClass="link" text="Back" />
+            </HBox>
+
+            <Label fx:id="messageLabel" />
+
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.ProfileController">
+
+    <!-- ===== TOP ===== -->
+    <top>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets bottom="20" top="20" />
+            </padding>
+            <Label styleClass="title" text="User Profile" />
+        </HBox>
+    </top>
+
+    <!-- ===== CENTER ===== -->
+    <center>
+        <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- First Name -->
+            <Label styleClass="subtext" text="First Name:" GridPane.rowIndex="0" />
+            <Text fx:id="firstNameText" styleClass="subtext" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <!-- Last Name -->
+            <Label styleClass="subtext" text="Last Name:" GridPane.rowIndex="1" />
+            <Text fx:id="lastNameText" styleClass="subtext" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Gender -->
+            <Label styleClass="subtext" text="Gender:" GridPane.rowIndex="2" />
+            <Text fx:id="genderText" styleClass="subtext" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- Birthday -->
+            <Label styleClass="subtext" text="Birthday:" GridPane.rowIndex="3" />
+            <Text fx:id="birthdayText" styleClass="subtext" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <!-- Age -->
+            <Label styleClass="subtext" text="Age:" GridPane.rowIndex="4" />
+            <Text fx:id="ageText" styleClass="subtext" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <!-- Info -->
+            <Text styleClass="text-readonly" text="Only height and weight can be edited." GridPane.columnSpan="2" GridPane.rowIndex="5" />
+
+            <!-- Height -->
+            <Label styleClass="subtext" text="Height (cm):" GridPane.rowIndex="6" />
+            <TextField fx:id="heightField" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <!-- Weight -->
+            <Label styleClass="subtext" text="Weight (kg):" GridPane.rowIndex="7" />
+            <TextField fx:id="weightField" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <!-- Message -->
+            <Label fx:id="messageLabel" style="-fx-text-fill:red;" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+
+            <!-- Buttons -->
+            <Button onAction="#handleChangePassword" prefWidth="210.0" styleClass="default-button" text="Change Password" GridPane.rowIndex="9" />
+
+            <Button onAction="#saveProfile" prefWidth="190.0" styleClass="default-button" text="Save Profile" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+            <Button onAction="#handleLogout" prefWidth="210.0" styleClass="default-button" text="Logout" GridPane.rowIndex="10" />
+         <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#goDashboard" styleClass="link" text="Back" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <GridPane.margin>
+               <Insets left="70.0" />
+            </GridPane.margin>
+         </Hyperlink>
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+
+        </GridPane>
+    </center>
+
+</BorderPane>

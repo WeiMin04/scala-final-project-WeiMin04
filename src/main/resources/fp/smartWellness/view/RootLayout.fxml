@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleDashboard" text="Dashboard" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Track">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleLogMood" text="Log Mood" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogSleep" text="Log Sleep" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Insight">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleHistory" text="History" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleStress" text="Stress Level" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleProfile" text="Profile " />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAchievement" text="Achievement" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Log Out" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

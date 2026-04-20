@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800" prefWidth="1200" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.SignUpController">
+    <children>
+        <HBox alignment="CENTER" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="25.0">
+            <VBox alignment="CENTER" prefHeight="655.0" prefWidth="381.0">
+                <children>
+                    <ImageView fitHeight="388.0" fitWidth="368.0" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../images/SignUp.png" />
+                        </image>
+                    </ImageView>
+                    <Label styleClass="title" text="BloomWell" />
+                    <Label styleClass="subtext" text="Start your wellness journey today" />
+                </children>
+            </VBox>
+
+            <!-- RIGHT FORM PANEL -->
+            <VBox alignment="CENTER" prefWidth="460" spacing="8">
+                <padding>
+                    <Insets left="20" right="20" />
+                </padding>
+
+                <children>
+                    <Label styleClass="subtitle" text="Create Account" />
+                    <Separator />
+
+                    <!-- PERSONAL INFO -->
+                    <Label styleClass="subtitle" text="Personal Info" />
+                    <GridPane hgap="10" vgap="8">
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="171.5" minWidth="95.26812744140625" prefWidth="166.5" />
+                            <ColumnConstraints maxWidth="254.0" minWidth="238.0" prefWidth="243.0" />
+                        </columnConstraints>
+
+                        <children>
+                            <Label styleClass="subtext" text="First Name" />
+                            <TextField fx:id="firstNameField" prefHeight="31.0" prefWidth="263.0" promptText="Enter your first name" styleClass="auth-field" GridPane.columnIndex="1" />
+
+                            <Label styleClass="subtext" text="Last Name" GridPane.rowIndex="1" />
+                            <TextField fx:id="lastNameField" prefHeight="26.0" prefWidth="176.0" promptText="Enter your last name" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- ACCOUNT INFO -->
+                    <Label styleClass="subtitle" text="Account Info" />
+                    <GridPane hgap="10" vgap="8">
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="167.0" minWidth="154.0" prefWidth="167.0" />
+                            <ColumnConstraints maxWidth="256.0" minWidth="243.0" prefWidth="243.0" />
+                        </columnConstraints>
+
+                        <children>
+                            <Label styleClass="subtext" text="Email" />
+                            <TextField fx:id="emailField" prefHeight="31.0" prefWidth="264.0" promptText="Enter your email address" styleClass="auth-field" GridPane.columnIndex="1" />
+
+                            <Label styleClass="subtext" text="Password" GridPane.rowIndex="1" />
+                            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                            <Label styleClass="subtext" text="Confirm Password" GridPane.rowIndex="2" />
+                            <PasswordField fx:id="confirmField" promptText="Re enter your password" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- HEALTH BASICS -->
+                    <Label styleClass="subtitle" text="Health Basics" />
+                    <GridPane hgap="10" vgap="8">
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="167.5" minWidth="103.055419921875" prefWidth="167.5" />
+                            <ColumnConstraints fillWidth="false" maxWidth="250.0" minWidth="242.0" prefWidth="242.0" />
+                        </columnConstraints>
+
+                        <children>
+                            <Label styleClass="subtext" text="Date of Birth" />
+                            <DatePicker fx:id="birthdayPicker" prefHeight="31.0" prefWidth="254.0" promptText="Select Date of Birth" styleClass="auth-field" GridPane.columnIndex="1" />
+
+                            <Label styleClass="subtext" text="Gender" GridPane.rowIndex="1" />
+                            <ChoiceBox fx:id="genderChoice" prefHeight="31.0" prefWidth="254.0" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                            <Label styleClass="subtext" text="Height (cm)" GridPane.rowIndex="2" />
+                            <TextField fx:id="heightField" prefHeight="31.0" prefWidth="254.0" promptText="Enter your height (cm)" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                            <Label styleClass="subtext" text="Weight (kg)" GridPane.rowIndex="3" />
+                            <TextField fx:id="weightField" prefHeight="31.0" prefWidth="254.0" promptText="Enter your weight (kg)" styleClass="auth-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- ERROR -->
+                    <Label fx:id="errorLabel" styleClass="error-label" />
+               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <children>
+      
+                          <!-- SPINNER -->
+                          <ProgressIndicator fx:id="spinner" prefHeight="30" prefWidth="30" visible="false">
+                        <HBox.margin>
+                           <Insets right="20.0" />
+                        </HBox.margin>
+                     </ProgressIndicator>
+      
+                          <!-- ACTIONS -->
+                          <Button fx:id="signUpButton" alignment="CENTER" contentDisplay="CENTER" onAction="#handleSignUp" styleClass="default-button" text="Create Account" />
+                     <Hyperlink contentDisplay="CENTER" graphicTextGap="0.0" onAction="#handleBack" styleClass="link" text="Back" textAlignment="CENTER">
+                        <HBox.margin>
+                           <Insets left="30.0" />
+                        </HBox.margin>
+                     </Hyperlink>
+                  </children>
+               </HBox>
+
+                    <HBox alignment="CENTER">
+                        <Text styleClass="subtext" text="Already have an account? " />
+                        <Hyperlink onAction="#handleLogin" styleClass="link" text="Log in" />
+                    </HBox>
+                </children>
+            </VBox>
+        </HBox>
+    </children>
+</AnchorPane>

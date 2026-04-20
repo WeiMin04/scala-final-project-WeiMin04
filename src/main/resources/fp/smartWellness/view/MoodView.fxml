@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800" prefWidth="1200" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.MoodController">
+
+    <children>
+        <VBox alignment="CENTER_LEFT" spacing="10" AnchorPane.leftAnchor="108" AnchorPane.topAnchor="81">
+
+            <Label styleClass="title" text="How are you feeling today?" />
+            <Label fx:id="dateLabel" />
+
+            <HBox spacing="8">
+
+                <Button fx:id="happyBtn" onAction="#selectHappy" text="😊 Happy">
+                    <styleClass>
+                        <String fx:value="mood-btn" />
+                        <String fx:value="color-happy" />
+                    </styleClass>
+                </Button>
+
+                <Button fx:id="neutralBtn" onAction="#selectNeutral" text="😐 Neutral">
+                    <styleClass>
+                        <String fx:value="mood-btn" />
+                        <String fx:value="color-neutral" />
+                    </styleClass>
+                </Button>
+
+                <Button fx:id="sadBtn" onAction="#selectSad" text="😢 Sad">
+                    <styleClass>
+                        <String fx:value="mood-btn" />
+                        <String fx:value="color-sad" />
+                    </styleClass>
+                </Button>
+
+                <Button fx:id="anxietyBtn" onAction="#selectAnxiety" text="😟 Anxiety">
+                    <styleClass>
+                        <String fx:value="mood-btn" />
+                        <String fx:value="color-anxiety" />
+                    </styleClass>
+                </Button>
+
+                <Button fx:id="angryBtn" onAction="#selectAngry" text="😡 Angry">
+                    <styleClass>
+                        <String fx:value="mood-btn" />
+                        <String fx:value="color-angry" />
+                    </styleClass>
+                </Button>
+
+            </HBox>
+
+            <Label styleClass="subtext" text="Notes (optional)" />
+            <TextArea fx:id="noteArea" styleClass="auth-text-area" />
+
+            <HBox alignment="CENTER_LEFT" spacing="30">
+                <Button onAction="#saveMood" styleClass="default-button" text="Save Mood" />
+                <Hyperlink contentDisplay="CENTER" onAction="#goDashboard" styleClass="link" text="Back" />
+            </HBox>
+
+            <Label fx:id="messageLabel" />
+
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fp.smartWellness.view.AchievementController">
+
+    <children>
+        <VBox layoutX="20" layoutY="20" prefWidth="360" spacing="12">
+
+            <!-- Title -->
+            <Label styleClass="title" text="🏆 Achievements" />
+
+            <Label styleClass="subtext" text="Your unlocked wellness achievements" />
+
+            <!-- Achievement list -->
+            <ListView fx:id="badgeList" prefHeight="200" />
+
+            <!-- Hint -->
+            <Label style="-fx-font-size: 11px; -fx-text-fill: gray;" text="Achievements motivate consistent and healthy habits." />
+
+        </VBox>
+    </children>
+</AnchorPane>
