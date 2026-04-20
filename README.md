@@ -1,14 +1,34 @@
-📘 AddressApp – ScalaFX OOP Project
-📌 Overview
+# 🧾 Address Book Management System (ScalaFX)
 
-AddressApp is a desktop GUI application developed using ScalaFX (JavaFX) that allows users to manage personal contact information. The system demonstrates core Object-Oriented Programming (OOP) principles and follows the Model-View-Controller (MVC) architecture.
+## 📌 Project Overview
+This project is a **GUI-based Address Book Management System** developed using **ScalaFX** as part of the Object-Oriented Programming (OOP) course.
 
-This project was developed as part of the PRG2104 Object-Oriented Programming course, focusing on applying OOP concepts, GUI development, and database integration.
+The application allows users to manage personal records, including adding, editing, viewing, and deleting contact information through an intuitive graphical interface.
 
-🎯 Objectives
-Apply OOP concepts such as inheritance, encapsulation, and polymorphism
-Build a GUI application using ScalaFX
-Implement MVC design pattern
-Integrate a database using ScalikeJDBC
-Provide a user-friendly system for managing contacts
+This project demonstrates the application of **OOP concepts**, **MVC architecture**, and **database integration**.
 
+---
+
+## 🎯 Objectives
+- Apply **Object-Oriented Programming (OOP)** concepts:
+  - Inheritance
+  - Polymorphism
+  - Encapsulation
+- Implement **MVC (Model-View-Controller)** architecture
+- Develop a **GUI application** using ScalaFX
+- Integrate **database operations** using JDBC (ScalikeJDBC)
+
+---
+
+## 🛠️ Technologies Used
+- **Scala 3**
+- **ScalaFX**
+- **JavaFX (FXML + Scene Builder)** :contentReference[oaicite:0]{index=0}
+- **SBT (Scala Build Tool)**
+- **ScalikeJDBC**
+- **Apache Derby / H2 Database**
+- **IntelliJ IDEA**
+
+---
+
+## 🧱 Project Structure
